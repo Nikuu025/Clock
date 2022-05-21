@@ -1,0 +1,29 @@
+:root 
+{
+    --background: #101010;
+}
+
+body 
+{
+    background-color: var(--background);
+    color: white;
+}
+
+.first-page
+{
+    height: 98vh;
+    width: 98vw;
+}
+
+.visible
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible
+{
+    display: none;
+}

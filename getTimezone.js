@@ -1,12 +1,38 @@
-window.addEventListener("DOMContentLoaded", () => checkCache());
+window.addEventListener("DOMContentLoaded", () => checkStorage());
 
-const checkCache = () => {
-    if(caches.has('Timezone') == true)
+var firstPage = document.getElementsByClassName("first-page")[0];
+var clockPage = document.getElementsByClassName("clock-page")[0];
+
+var select = document.getElementById("timezone");
+
+var timezone;
+
+const checkStorage = () => {
+    if("Timezone" in localStorage)
     {
-        console.log("true")
+        var storage = 1;
+
+        firstPage.classList.remove("visible");
+        firstPage.classList.add("invisible");
+
+        clockPage.classList.remove("invisible");
+        clockPage.classList.add("visible");
     }
     else 
     {
-        console.log("false")
+        var storage = 0;
+
+        select.addEventListener("change", () => addStorage());
     }
+
+    console.log("storage: " + storage);
+}
+
+const addStorage = () => {
+    timezone = select.value;
+    
+    localStorage['Timezone'] = timezone;
+    console.log(localStorage['Timezone']);
+
+    checkStorage();
 }

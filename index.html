@@ -7,13 +7,16 @@
         <!--Google Fonts-->
     </head>
     <body>
-        <div class="first-page container-flex main-container">
+        <div class="first-page container-flex main-container visible">
             <!--class visible added by js-->
             <h2>CHOOSE YOUR TIMEZONE</h2>
-            <select id="timezone"></select>
+            <select id="timezone">
+                <option value=1>1</option>
+                <option value=2>2</option>
+            </select>
         </div>
 
-        <div class="clock-page container-flex main-container">
+        <div class="clock-page container-flex main-container invisible">
             <!--class invisible if timezone not specified-->
             <h2>TEST</h2>
         </div>
