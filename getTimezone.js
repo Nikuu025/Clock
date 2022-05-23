@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => checkStorage());
 
 var firstPage = document.getElementsByClassName("first-page")[0];
 var clockPage = document.getElementsByClassName("clock-page")[0];
+var topBar = document.getElementsByClassName("top-bar")[0];
 
 var select = document.getElementById("timezone");
 
@@ -17,6 +18,9 @@ const checkStorage = () => {
 
         clockPage.classList.remove("invisible");
         clockPage.classList.add("visible");
+
+        topBar.classList.remove("invisible");
+        topBar.classList.add("visible");
     }
     else 
     {

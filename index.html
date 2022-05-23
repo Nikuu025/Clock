@@ -5,20 +5,59 @@
         <link rel="stylesheet" href="style.css"/>
 
         <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="first-page container-flex main-container visible">
+        <div class="first-page main-container visible">
             <!--class visible added by js-->
             <h2>CHOOSE YOUR TIMEZONE</h2>
             <select id="timezone">
-                <option value=1>1</option>
-                <option value=2>2</option>
+                <option value="" selected disabled hidden>UTC+00:00</option>
+                <option value=-12>UTC-12:00</option>
+                <option value=-11>UTC-11:00</option>
+                <option value=-10>UTC-10:00</option>
+                <option value=-9>UTC-9:00</option>
+                <option value=-8>UTC-8:00</option>
+                <option value=-7>UTC-7:00</option>
+                <option value=-6>UTC-6:00</option>
+                <option value=-5>UTC-5:00</option>
+                <option value=-4.5>UTC-4:30</option>
+                <option value=-4>UTC-4:00</option>
+                <option value=-3.5>UTC-3:30</option>
+                <option value=-2>UTC-2:00</option>
+                <option value=-1>UTC-1:00</option>
+                <option value=0>UTC+00:00</option>
+                <option value=1>UTC+01:00</option>
+                <option value=2>UTC+02:00</option>
+                <option value=3>UTC+03:00</option>
+                <option value=3.5>UTC+03:30</option>
+                <option value=4>UTC+04:00</option>
+                <option value=4.5>UTC+04:30</option>
+                <option value=5>UTC+05:00</option>
+                <option value=5.5>UTC+05:30</option>
+                <option value=5.75>UTC+05:45</option>
+                <option value=6>UTC+06:00</option>
+                <option value=6.5>UTC+06:30</option>
+                <option value=7>UTC+07:00</option>
+                <option value=8>UTC+08:00</option>
+                <option value=9>UTC+09:00</option>
+                <option value=9.5>UTC+09:30</option>
+                <option value=10>UTC+10:00</option>
+                <option value=11>UTC+11:00</option>
+                <option value=12>UTC+12:00</option>
+                <option value=13>UTC+13:00</option>
             </select>
         </div>
 
-        <div class="clock-page container-flex main-container invisible">
+        <div class="clock-page main-container invisible">
             <!--class invisible if timezone not specified-->
             <h2>TEST</h2>
+        </div>
+
+        <div class="top-bar invisible">
+            
         </div>
 
         <script type="text/javascript" src="getTimezone.js"></script>

@@ -7,23 +7,80 @@ body
 {
     background-color: var(--background);
     color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
 }
 
-.first-page
+.first-page, .clock-page
 {
     height: 98vh;
     width: 98vw;
 }
 
+.first-page select 
+{
+    background-color: #454545;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #404050 #101015;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #454545;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #101015;
+    border-radius: 20px;
+    border: 0;
+  }
+
 .visible
 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    animation: hello 3s;
 }
 
 .invisible
 {
     display: none;
+}
+
+@-webkit-keyframes hello
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.main-container
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.top-bar
+{
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    top: 0;
 }
